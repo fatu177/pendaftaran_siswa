@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use Filament\Enums\ThemeMode;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -23,13 +24,18 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            ->defaultThemeMode(ThemeMode::Dark)
             ->default()
+            ->brandName('PPKD Jakarta Pusat')
+            ->favicon(asset('images/logo.jpeg'))
+            ->brandLogoHeight('200px')
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('PPKD Jakarta Pusat')
             ->profile()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => 'rgb(99, 102, 241)',
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')

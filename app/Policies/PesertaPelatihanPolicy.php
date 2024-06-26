@@ -23,7 +23,7 @@ class PesertaPelatihanPolicy
      */
     public function view(User $user, pesertapelatihan $pesertapelatihan): bool
     {
-        return $user->hasRole('Admin');
+        return true;
     }
 
     /**
@@ -31,7 +31,7 @@ class PesertaPelatihanPolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasRole('Admin');
+        return true;
     }
 
     /**

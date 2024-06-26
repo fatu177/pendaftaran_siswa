@@ -21,7 +21,7 @@ class gelombangPolicy
      */
     public function view(User $user, gelombang $gelombang): bool
     {
-        return $user->hasRole('Admin');
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class gelombangPolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasRole('Admin');
+        return true;
     }
 
     /**

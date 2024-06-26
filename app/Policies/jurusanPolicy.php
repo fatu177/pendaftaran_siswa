@@ -21,7 +21,7 @@ class jurusanPolicy
      */
     public function view(User $user, jurusan $jurusan): bool
     {
-        return $user->hasRole('Admin');
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class jurusanPolicy
      */
     public function create(User $user): bool
     {
-        return $user->hasRole('Admin');
+        return true;
     }
 
     /**

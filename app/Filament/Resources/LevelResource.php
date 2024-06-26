@@ -49,11 +49,6 @@ class LevelResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make()->successNotificationTitle('Edit Success'),
                 Tables\Actions\DeleteAction::make()->successNotificationTitle('Delete Success'),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
             ]);
     }
 
