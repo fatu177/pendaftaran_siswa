@@ -66,7 +66,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
 login menggunakan 
 super admin
-email : rfathu177@gmail.com
+email : admin@gmail.com
 password : 123
 instruktur
 email : instruktur@gmail.com
